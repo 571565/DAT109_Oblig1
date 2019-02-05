@@ -1,0 +1,41 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Day2 {
+
+	public static void main(String[] args) {
+		File fil;
+		
+		int sum = 0;
+		
+		
+		try {
+			
+			fil = new File("inputday2.txt");
+			Scanner scan = new Scanner(fil);
+			
+			
+			while (scan.hasNext()) {
+				
+				String linje = scan.next();
+				Char[] tab = linje.toCharArray();
+				
+				if ()
+				
+				
+				
+				
+				
+			}
+			
+	
+				
+
+		} catch (FileNotFoundException e) {
+		}
+
+	}
+
+}

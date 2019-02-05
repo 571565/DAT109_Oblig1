@@ -1,0 +1,226 @@
+package no.hvl.dat109.modell;
+import no.hvl.dat109.utsyn.*;
+import no.hvl.dat109.modell.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
+
+public class Yatzoo {
+
+	private Terning terning;
+	private Integer terning_score = 0;
+	private static Integer n = 0;
+	private YatzooUI ui;
+	private Boolean spillFerdig;
+	private List<Spiller> spillere;
+	private Spiller vinner;
+	private Integer runde = 1;
+	
+	ArrayList<String> dyr = new ArrayList<String>();
+	private Map<String,Integer> hm = new HashMap();
+	
+	
+	
+	public Yatzoo() {
+		this(null);
+		spillere = new ArrayList<Spiller>();
+		terning = new Terning();
+		spillFerdig = Boolean.FALSE;
+	}
+	
+	public Yatzoo(YatzooUI ui) {
+		this.ui = ui;
+		spillere = new ArrayList<Spiller>();
+		terning = new Terning();
+		spillFerdig = Boolean.FALSE;
+	}
+	
+	public void start() {
+		while (!spillFerdig) {
+			spillRunde();
+		}
+	}
+	/**
+	 * 
+	public Boolean erFerdig(Spiller spiller) {
+		if (spilleren har mest poeng etter 12 runder) {
+			spillFerdig = Boolean.TRUE;
+			vinner = spiller;
+		}
+		return spillFerdig;
+	}
+	 * 
+	 */
+	// antall spillere må lages, 
+	public void spillRunde() {
+		for (int i = 0; i < antallSpillere() && spillFerdig == Boolean.FALSE); i++) {
+			Spiller s = spillere.get(i);
+
+			spillTrekk(s);
+		}
+		runde++;
+	}
+	
+	public void spillTrekk(Spiller spiller) {
+		
+		
+for(int i=0;i<5;i++) {
+			
+		
+		terning.trill();
+			if(runde==1) {
+			 if(terning.getDyr()=="løve") {
+				 	terning_score++;			
+			 }
+			}
+			else if(runde==2) {
+				if(terning.getDyr()=="slange") {
+				 	terning_score++;			
+			 }
+				
+			}
+			else if(runde==3) {
+				if(terning.getDyr()=="panda") {
+				 	terning_score++;			
+			 }
+				
+			}
+			else if(runde==4) {
+				if(terning.getDyr()=="gris") {
+				 	terning_score++;			
+			 }
+	
+			}
+			else if(runde==5) {
+				if(terning.getDyr()=="elefant") {
+				 	terning_score++;			
+			 }
+	
+			}
+			else if (runde==6){
+				if(terning.getDyr()=="hval") {
+				 	terning_score++;			
+			 }
+				else {
+					//ingenting skjer, altså - terning score = terning score
+				}
+			
+			}
+			
+	
+			}
+// må si hva scoren ble, og få tilbud om å kaste igjen hvis han ikke har kastet 3 ganger allerede
+
+
+			if(runde==7) {
+				terning.trill();
+				dyr.add(terning.getDyr());
+				terning.trill();
+				dyr.add(terning.getDyr());
+				terning.trill();
+				dyr.add(terning.getDyr());
+				terning.trill();
+				dyr.add(terning.getDyr());
+				terning.trill();
+				dyr.add(terning.getDyr());
+				
+				for(String s: dyr) {
+					if(!hm.containsKey(s)){
+			            hm.put(s,1);
+			        }else{
+			            hm.put(s, hm.get(s)+1);
+			        }
+				}
+				System.out.println("Terningkast resultat:" + hm);
+				if(hm.containsValue(3)) {
+					System.out.println("Du får 3 poeng");
+				}
+				else if(hm.containsValue(4)) {
+					System.out.println("Du får 3 poeng");	
+				}
+				else if(hm.containsValue(5)) {
+					System.out.println("Du får 3 poeng");
+				}
+			}
+	
+			else if(runde==8) {
+				terning.trill();
+				dyr.add(terning.getDyr());
+				terning.trill();
+				dyr.add(terning.getDyr());
+				terning.trill();
+				dyr.add(terning.getDyr());
+				terning.trill();
+				dyr.add(terning.getDyr());
+				terning.trill();
+				dyr.add(terning.getDyr());
+				
+				
+				for(String s: dyr) {
+					if(!hm.containsKey(s)){
+			            hm.put(s,1);
+			        }else{
+			            hm.put(s, hm.get(s)+1);
+			        }
+				}
+				System.out.println("Terningkast resultat:" + hm);
+				if(hm.containsValue(4)) {
+					System.out.println("Du får 4 poeng");	
+				}
+				else if(hm.containsValue(5)) {
+					System.out.println("Du får 4 poeng");
+				}
+					
+			}
+				
+				
+								
+			
+
+			
+			if(runde==9) {
+				Collection<Integer> par = hm.values();
+				for(Integer f : par) {
+					System.out.println((Integer) f);
+					if(f.equals(2)||f.equals(3)) {
+						n++;
+					}
+				}
+					if(n==2) {
+						//rullet 2 par = 4 poeng
+					}
+
+			}
+			else if(runde==10) {
+				if(hm.values().contains(2)&& hm.values().contains(3)) {
+					
+				}
+
+			}
+			else if(runde==11) {
+				if(!hm.values().contains(2)&&!hm.values().contains(3)
+						&&!hm.values().contains(4)&&!hm.values().contains(5)) {
+					
+				}
+
+			}
+			else if(runde==12) {
+				if(hm.values().contains(5)) {
+					
+					
+				}
+
+
+
+			}
+
+	}
+	
+}
+	
+	
+	
+
+

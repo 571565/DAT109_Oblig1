@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+/Users/kjetildyrland/Eclipse/DAT109/.metadata/.plugins/org.eclipse.jdt.core
+3162170919.index
+3802741483.index
+2048152730.index

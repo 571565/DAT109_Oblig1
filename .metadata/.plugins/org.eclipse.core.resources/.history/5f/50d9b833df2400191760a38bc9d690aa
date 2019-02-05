@@ -1,0 +1,56 @@
+import java.util.ArrayList;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class day2part2 {
+
+
+		public static void main(String[] args) {
+			File fil;
+
+
+			ArrayList<Character> tabell = new ArrayList<Character>();
+
+			try {
+
+				fil = new File("inputday2.txt");
+				Scanner scan = new Scanner(fil);
+
+				while (scan.hasNext()) {
+					tabell.add(scan.next());
+				}
+
+			} catch (FileNotFoundException e) {
+			}
+				
+					
+					
+
+					String linje = scan.next();
+					char[] tab = linje.toCharArray();
+					for (char c : tab) {
+						tabell.add(c);
+					}
+					
+
+					for (Character c : tabell) {
+
+						for (Character i : tabell) {
+
+							if (c == i) {
+								like++;
+							}
+
+						}
+
+					}
+
+				
+			System.out.println(sum3 * sum2);
+
+		}
+
+	}
+

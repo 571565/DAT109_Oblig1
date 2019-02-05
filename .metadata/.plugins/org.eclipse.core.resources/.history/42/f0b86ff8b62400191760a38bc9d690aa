@@ -1,0 +1,47 @@
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+
+public class Day1 {
+
+	public static void main(String[] args) {
+		
+		FileReader filereader;
+		try {
+			
+			
+			filereader = new FileReader("input.txt");
+			BufferedReader buff = new BufferedReader(filereader);
+			
+			int sum = 0;
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			System.out.println("Finner ikke fil");
+		}
+		
+		
+
+
+	}
+	
+	public static String tall (String a) {
+		if (a.startsWith("+")) {
+			return a.substring(1);
+		} else {
+			return "-" + a.substring(1);
+			
+		}
+	}
+
+}

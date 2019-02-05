@@ -1,0 +1,59 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class day2part2 {
+
+
+		public static void main(String[] args) {
+			File fil;
+
+
+			ArrayList<String> tabell = new ArrayList<String>();
+			String riktig = "";
+
+			try {
+
+				fil = new File("inputday2.txt");
+				Scanner scan = new Scanner(fil);
+
+				while (scan.hasNext()) {
+					tabell.add(scan.next());
+				}
+
+			} catch (FileNotFoundException e) {
+			}
+				
+				Iterator<String> i = tabell.iterator();
+				
+				while (i.hasNext()) {
+				
+					String linje = i.next();
+					char[] tab = linje.toCharArray();
+					ArrayList<Character> chartab = new ArrayList<Character>();
+					for (char c : tab) {
+						chartab.add(c);
+					}
+					
+
+					for (String c : tabell) {
+
+						char[] tab2 = c.toCharArray();
+						ArrayList<Character> chartab2 = new ArrayList<Character>();
+						for (char a : tab2) {
+							chartab2.add(a);
+						}
+
+					}
+				}
+
+				
+			System.out.println(riktig);
+
+		}
+
+	}
+

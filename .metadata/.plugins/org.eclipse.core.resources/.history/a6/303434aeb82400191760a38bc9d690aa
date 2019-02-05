@@ -1,0 +1,36 @@
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Day1 {
+
+	public static void main(String[] args) {
+
+		FileReader filereader;
+		int sum = 0;
+		try {
+
+			File file = new File("input.txt");
+			Scanner scan = new Scanner(file);
+			
+			
+			while (scan.hasNextLine()) {
+				
+				sum += scan.nextInt();
+			}
+			
+
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			System.out.println("Finner ikke fil");
+		}
+		
+		System.out.println(sum);
+
+	}
+
+
+}

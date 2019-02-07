@@ -1,16 +1,29 @@
 package no.hvl.dat109.modell;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Spiller {
 	private Integer spiller_id;
 	private String navn;
+	private List<Integer> rundeScore;
 	public Integer spiller_score;
 	
 	public Spiller() {
-		
 	}
 	public Spiller(String navn) {
 		this.navn = navn;
+		rundeScore = new ArrayList<Integer>();
+		spiller_score = 0;
 	}
+	
+	public List<Integer> getRundeScore() {
+		return rundeScore;
+	}
+	public void setRundeScore(List<Integer> rundeScore) {
+		this.rundeScore = rundeScore;
+	}
+	
 	public String getNavn() {
 		return navn;
 	}

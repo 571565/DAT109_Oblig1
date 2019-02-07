@@ -1,8 +1,11 @@
 package no.hvl.dat109.utsyn;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import no.hvl.dat109.modell.Spiller;
+import no.hvl.dat109.modell.Terning;
+import no.hvl.dat109.modell.TerningKopp;
 import no.hvl.dat109.modell.Yatzoo;
 
 public interface YatzooUI {
@@ -13,10 +16,12 @@ public interface YatzooUI {
 	//Leser inn spillernavn
 	public String lesInnSpiller();
 	
-	//Metode for å finne vinner
-	public void vinner(Yatzoo yatzoo);
 	
 	//Metode for å skrive ut antall spillere
 	public void antallSpillere(List<Spiller> spillere);
+	
+	public void visRundeRegler(int runde);
+	
+	public ArrayList<Terning> HvilkeTerningerSkalBeholdes(TerningKopp kast);
 
 }

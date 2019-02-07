@@ -21,6 +21,7 @@ public interface YatzooUI {
 	public void antallSpillere(List<Spiller> spillere);
 	
 	public void visRundeRegler(int runde);
+	public void nesteKast();
 	
 	public ArrayList<Terning> HvilkeTerningerSkalBeholdes(TerningKopp kast);
 

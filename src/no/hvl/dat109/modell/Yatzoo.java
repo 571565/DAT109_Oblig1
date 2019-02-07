@@ -124,7 +124,12 @@ public class Yatzoo {
 		while (i < 2) {
 			
 			kopp.visTerningKopp();
+			if (runde < 7) {
+				kopp.setKopp(beholdRiktige(kopp.getKopp()));
+				ui.nesteKast();
+			} else {
 			kopp.setKopp(ui.HvilkeTerningerSkalBeholdes(kopp));
+			}
 			if (kopp.getKopp().size() >= 5) {
 				return kopp.getKopp();
 			}
@@ -151,6 +156,16 @@ public class Yatzoo {
 		return antallLike;
 	
 		
+	}
+	
+	public ArrayList<Terning> beholdRiktige (ArrayList<Terning> kopp) {
+		ArrayList<Terning> beholdes = new ArrayList<Terning>();
+		for (Terning t : kopp) {
+			if (runde == t.getVerdi()) {
+				beholdes.add(t);
+			}
+		}
+		return beholdes;
 	}
 
 	public int regnUtScore(ArrayList<Terning> kopp) {

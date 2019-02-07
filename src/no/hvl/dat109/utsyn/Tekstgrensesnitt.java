@@ -41,7 +41,10 @@ public class Tekstgrensesnitt implements YatzooUI {
 		System.out.println("------------------");
 		System.out.print("Det er runde " + runde + " , det er om å gjøre å finne: ");
 		if (runde < 7) {
+			if (runde < 3)
 			System.out.println(dyr.get(runde - 1) + "r");
+			else 
+			System.out.println(dyr.get(runde - 1) + "er");
 		} else if (runde == 7) {
 			System.out.println("3 like av hvilket som helst par");
 		} else if (runde == 8) {
@@ -60,6 +63,11 @@ public class Tekstgrensesnitt implements YatzooUI {
 	
 	public void antallSpillere(List<Spiller> spillere) {
 		System.out.println("\n\tAntall spillere " + spillere.size());
+	}
+	
+	public void nesteKast() {
+		System.out.println("Trykk enter for å kaste en gang til");
+		tast.nextLine();
 	}
 	
 	public ArrayList<Terning> HvilkeTerningerSkalBeholdes(TerningKopp kopp) {

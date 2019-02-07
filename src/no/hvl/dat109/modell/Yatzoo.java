@@ -123,6 +123,10 @@ public class Yatzoo {
 		kopp.kast();
 		while (i < 2) {
 			
+			regnUtScore(kopp.getKopp());
+			if (max_score)
+				return kopp.getKopp();
+			
 			kopp.visTerningKopp();
 			if (runde < 7) {
 				kopp.setKopp(beholdRiktige(kopp.getKopp()));
@@ -133,9 +137,7 @@ public class Yatzoo {
 			if (kopp.getKopp().size() >= 5) {
 				return kopp.getKopp();
 			}
-			regnUtScore(kopp.getKopp());
-			if (max_score)
-				return kopp.getKopp();
+			
 			i++;
 			kopp.kast();
 		}

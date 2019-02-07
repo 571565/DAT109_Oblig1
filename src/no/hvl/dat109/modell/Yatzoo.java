@@ -46,6 +46,7 @@ public class Yatzoo {
 			spillRunde();
 			if (spillFerdig == Boolean.TRUE) {
 				visVinner();
+				return;
 			}
 			vinner = finnVinner();
 			rundeVinner();
@@ -58,11 +59,12 @@ public class Yatzoo {
 	
 
 	public void rundeVinner() {
+		System.out.println("------------------");
 		System.out.println("\t" + vinner.getNavn() + " vant runde "+ runde + " med " + vinner.getRundeScore().get(runde - 1) + " score");
 	}
 	
 	public void visVinner() {
-		System.out.println("\t" + vinner.getNavn() + "vant spillet med " + vinner.getSpiller_score() + " score");
+		System.out.println("\t" + vinner.getNavn() + " vant spillet med " + vinner.getSpiller_score() + " score");
 	}
 	
 	

@@ -9,8 +9,7 @@ public class Spiller {
 	private List<Integer> rundeScore;
 	public Integer spiller_score;
 	
-	public Spiller() {
-	}
+	
 	public Spiller(String navn) {
 		this.navn = navn;
 		rundeScore = new ArrayList<Integer>();

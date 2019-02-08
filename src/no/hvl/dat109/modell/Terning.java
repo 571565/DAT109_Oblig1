@@ -3,7 +3,7 @@ package no.hvl.dat109.modell;
 import java.util.Random;
 
 /**
- * @author kjetildyrland
+ * @author Kjetil Dyrland, Vilhelm SKagestad, Thomas Vu, Carsten Ditlev-Simonsen
  *
  */
 public class Terning {

@@ -13,6 +13,10 @@ import no.hvl.dat109.modell.Terning;
 import no.hvl.dat109.modell.TerningKopp;
 import no.hvl.dat109.modell.Yatzoo;
 
+/**
+ * @author Kjetil Dyrland, Vilhelm SKagestad, Thomas Vu, Carsten Ditlev-Simonsen
+ *
+ */
 public class YatzooTest {
 
 	private Yatzoo yatzoo; 
@@ -68,8 +72,9 @@ public class YatzooTest {
 		kopp.setKopp(l);
 		yatzoo.regnUtScore(kopp.getKopp());
 		assertTrue(yatzoo.isMax_score());
-		
 
 	}
+	
+	
 
 }

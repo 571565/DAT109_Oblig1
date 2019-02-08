@@ -3,7 +3,7 @@ package no.hvl.dat109.modell;
 import no.hvl.dat109.utsyn.Tekstgrensesnitt;
 
 /**
- * @author kjetildyrland
+ * @author Kjetil Dyrland, Vilhelm SKagestad, Thomas Vu, Carsten Ditlev-Simonsen
  * @main
  */
 public class Spill {

@@ -8,7 +8,7 @@ import org.junit.Test;
 import no.hvl.dat109.modell.TerningKopp;
 
 /**
- * @author vilhelm
+ * @author Kjetil Dyrland, Vilhelm SKagestad, Thomas Vu, Carsten Ditlev-Simonsen
  *
  */
 public class TerningKoppTest {
@@ -22,7 +22,16 @@ public class TerningKoppTest {
 	
 
 	@Test
-	public void Test() {
+	public void testKast() {
+		test.kast();
+		assertEquals(5, test.getKopp().size());
+	}
+	
+	@Test
+	public void testNyttKast() {
+		test.kast();
+		test.getKopp().remove(4);
+		assertEquals(4, test.getKopp().size());
 		test.kast();
 		assertEquals(5, test.getKopp().size());
 	}

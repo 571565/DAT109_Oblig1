@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.HashMap;
 
 /**
- * @author Kjetil Dyrland
+ * @author Kjetil Dyrland, Vilhelm SKagestad, Thomas Vu, Carsten Ditlev-Simonsen
  *
  */
 public class Yatzoo {

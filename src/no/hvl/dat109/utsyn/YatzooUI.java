@@ -9,6 +9,10 @@ import no.hvl.dat109.modell.TerningKopp;
 
 
 
+/**
+ * @author Kjetil Dyrland, Vilhelm SKagestad, Thomas Vu, Carsten Ditlev-Simonsen
+ *
+ */
 public interface YatzooUI {
 	
 	

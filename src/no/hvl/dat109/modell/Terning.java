@@ -2,21 +2,34 @@ package no.hvl.dat109.modell;
 
 import java.util.Random;
 
+/**
+ * @author kjetildyrland
+ *
+ */
 public class Terning {
 	
 	private static final Random RAND = new Random(System.currentTimeMillis());
 	private Integer verdi;
 	
+	/**
+	 * @Constructor
+	 */
 	public Terning () {
 		verdi = RAND.nextInt(6) + 1;
 		
 	}
 	
+	/**
+	 * @return int
+	 */
 	public int getVerdi() {
 		
 		return verdi;
 	}
 	
+	/**
+	 * @return String
+	 */
 	public String getDyr() {
 		
 		String dyret;

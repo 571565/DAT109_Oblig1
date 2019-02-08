@@ -3,6 +3,10 @@ package no.hvl.dat109.modell;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author kjetildyrland
+ *
+ */
 public class Spiller {
 	private Integer spiller_id;
 	private String navn;
@@ -10,18 +14,25 @@ public class Spiller {
 	public Integer spiller_score;
 	
 	
+	/**
+	 * @constructor
+	 * @param navn
+	 */
 	public Spiller(String navn) {
 		this.navn = navn;
 		rundeScore = new ArrayList<Integer>();
 		spiller_score = 0;
 	}
 	
+	
 	public List<Integer> getRundeScore() {
 		return rundeScore;
 	}
+	
 	public void setRundeScore(List<Integer> rundeScore) {
 		this.rundeScore = rundeScore;
 	}
+	
 	
 	public String getNavn() {
 		return navn;

@@ -2,33 +2,53 @@ package no.hvl.dat109.modell;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
+/**
+ * @author kjetildyrland
+ *
+ */
 public class TerningKopp {
 	
 	private final static int ANTALL_TERNINGER = 5;
 	
-	private ArrayList<Terning> kopp;
+	private List<Terning> kopp;
 	
 	
+	/**
+	 * @Constructor
+	 */
 	public TerningKopp() {
 		kopp = new ArrayList<Terning>();
 	}
 	
 	
-	public ArrayList<Terning> getKopp() {
+	/**
+	 * @return List
+	 */
+	public List<Terning> getKopp() {
 		return kopp;
 	}
 
-	public void setKopp(ArrayList<Terning> kopp) {
+	/**
+	 * @param kopp
+	 */
+	public void setKopp(List<Terning> kopp) {
 		this.kopp = kopp;
 	}
 
+	/**
+	 * @return void
+	 */
 	public void kast() {
 		while (kopp.size() < ANTALL_TERNINGER) {
 			kopp.add(new Terning());
 		}
 	}
 	
+	/**
+	 * @return void
+	 */
 	public void visTerningKopp() {
 		Iterator<Terning> iterator = kopp.iterator();
 		int i = 1;

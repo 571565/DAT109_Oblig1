@@ -1,6 +1,5 @@
 package no.hvl.dat109.utsyn;
 
-import no.hvl.dat109.modell.Yatzoo;
 import no.hvl.dat109.modell.Spiller;
 import no.hvl.dat109.modell.Terning;
 import no.hvl.dat109.modell.TerningKopp;
@@ -12,9 +11,15 @@ import java.util.Scanner;
 
 public class Tekstgrensesnitt implements YatzooUI {
 	
+	
 	private Scanner tast;
 	private ArrayList<String> dyr;
 	
+	
+	
+	/**
+	 * @Constructor
+	 */
 	public Tekstgrensesnitt () {
 		tast = new Scanner(System.in);
 		dyr = new ArrayList<String>();
@@ -70,12 +75,12 @@ public class Tekstgrensesnitt implements YatzooUI {
 		tast.nextLine();
 	}
 	
-	public ArrayList<Terning> HvilkeTerningerSkalBeholdes(TerningKopp kopp) {
+	public List<Terning> HvilkeTerningerSkalBeholdes(TerningKopp kopp) {
 		
 		System.out.println("Hvilke terninger vil du beholde? Tast 0 for ferdig" );
 		
 		ArrayList<Terning> beholdes = new ArrayList<Terning>();
-		ArrayList<Terning> kast = kopp.getKopp();
+		List<Terning> kast = kopp.getKopp();
 		
 		
 		while (beholdes.size() < 5) {

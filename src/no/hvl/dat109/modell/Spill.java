@@ -13,7 +13,11 @@ public class Spill {
 		Tekstgrensesnitt tg = new Tekstgrensesnitt();
 		Yatzoo spill = new Yatzoo(tg);
 		
-	
+		Spiller s1 = new Spiller ("Kjetil");
+		Spiller s2 = new Spiller ("Vilhelm");
+		
+		spill.leggTilSpiller(s1);
+		spill.leggTilSpiller(s2);
 		
 		spill.start();
 		

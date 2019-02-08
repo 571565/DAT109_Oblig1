@@ -51,11 +51,14 @@ public class TerningKopp {
 	 */
 	public void visTerningKopp() {
 		Iterator<Terning> iterator = kopp.iterator();
+		
 		int i = 1;
 		while (iterator.hasNext()) {
 			System.out.println("Terning nr " + i + " ble: " + iterator.next().getDyr());
 			i++;
 		}
+		System.out.println("------------------");
+		
 		
 	}
 	

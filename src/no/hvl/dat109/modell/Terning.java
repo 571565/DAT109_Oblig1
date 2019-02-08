@@ -19,6 +19,10 @@ public class Terning {
 		
 	}
 	
+	public void setVerdi(Integer verdi) {
+		this.verdi = verdi;
+	}
+
 	/**
 	 * @return int
 	 */

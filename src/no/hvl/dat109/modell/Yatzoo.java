@@ -63,7 +63,7 @@ public class Yatzoo {
 			
 			vinner = finnVinner();
 			rundeVinner();
-			runde++;
+			nyRunde();
 			if (runde > 12) {
 				spillFerdig = Boolean.TRUE;
 			}
@@ -74,6 +74,9 @@ public class Yatzoo {
 		
 	}
 	
+
+	
+
 
 	/**
 	 * @return void
@@ -86,6 +89,7 @@ public class Yatzoo {
 	 * @return void
 	 */
 	public void visVinner() {
+		System.out.println("------------------");
 		System.out.println("\t" + vinner.getNavn() + " vant spillet med " + vinner.getSpiller_score() + " score");
 	}
 	
@@ -151,6 +155,10 @@ public class Yatzoo {
 		}
 		
 		
+	}
+	
+	public void nyRunde() {
+		runde++;
 	}
 
 	/** Velger trekket til neste spiller
@@ -271,5 +279,49 @@ public class Yatzoo {
 		
 
 }
+	
+	public List<Spiller> getSpillere() {
+		return spillere;
+	}
+
+
+	public void setSpillere(List<Spiller> spillere) {
+		this.spillere = spillere;
+	}
+
+
+	public Integer getRunde() {
+		return runde;
+	}
+
+
+	public void setRunde(Integer runde) {
+		this.runde = runde;
+	}
+
+
+	public boolean isMax_score() {
+		return max_score;
+	}
+
+
+	public void setMax_score(boolean max_score) {
+		this.max_score = max_score;
+	}
+
+
+	public void setVinner(Spiller vinner) {
+		this.vinner = vinner;
+	}
+
+
+	public TerningKopp getKopp() {
+		return kopp;
+	}
+
+
+	public void setKopp(TerningKopp kopp) {
+		this.kopp = kopp;
+	}
 
 }

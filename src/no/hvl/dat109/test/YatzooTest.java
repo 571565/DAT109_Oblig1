@@ -8,7 +8,6 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
-import no.hvl.dat109.modell.Spiller;
 import no.hvl.dat109.modell.Terning;
 import no.hvl.dat109.modell.TerningKopp;
 import no.hvl.dat109.modell.Yatzoo;

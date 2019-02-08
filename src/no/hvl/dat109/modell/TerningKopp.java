@@ -9,20 +9,18 @@ import java.util.List;
  *
  */
 public class TerningKopp {
-	
+
 	private final static int ANTALL_TERNINGER = 5;
-	
+
 	private List<Terning> kopp;
-	
-	
+
 	/**
 	 * @Constructor
 	 */
 	public TerningKopp() {
 		kopp = new ArrayList<Terning>();
 	}
-	
-	
+
 	/**
 	 * @return List
 	 */
@@ -45,22 +43,20 @@ public class TerningKopp {
 			kopp.add(new Terning());
 		}
 	}
-	
+
 	/**
 	 * @return void
 	 */
 	public void visTerningKopp() {
 		Iterator<Terning> iterator = kopp.iterator();
-		
+
 		int i = 1;
 		while (iterator.hasNext()) {
 			System.out.println("Terning nr " + i + " ble: " + iterator.next().getDyr());
 			i++;
 		}
 		System.out.println("------------------");
-		
-		
+
 	}
-	
 
 }

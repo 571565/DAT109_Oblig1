@@ -12,8 +12,7 @@ public class Spiller {
 	private String navn;
 	private List<Integer> rundeScore;
 	public Integer spiller_score;
-	
-	
+
 	/**
 	 * @constructor
 	 * @param navn
@@ -23,17 +22,15 @@ public class Spiller {
 		rundeScore = new ArrayList<Integer>();
 		spiller_score = 0;
 	}
-	
-	
+
 	public List<Integer> getRundeScore() {
 		return rundeScore;
 	}
-	
+
 	public void setRundeScore(List<Integer> rundeScore) {
 		this.rundeScore = rundeScore;
 	}
-	
-	
+
 	public String getNavn() {
 		return navn;
 	}
@@ -41,7 +38,7 @@ public class Spiller {
 	public void setNavn(String navn) {
 		this.navn = navn;
 	}
-	
+
 	public Integer getSpiller_id() {
 		return spiller_id;
 	}
@@ -49,7 +46,7 @@ public class Spiller {
 	public void setSpiller_id(Integer spiller_id) {
 		this.spiller_id = spiller_id;
 	}
-	
+
 	public Integer getSpiller_score() {
 		return spiller_score;
 	}

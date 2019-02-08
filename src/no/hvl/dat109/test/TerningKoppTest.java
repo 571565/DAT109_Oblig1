@@ -7,6 +7,10 @@ import org.junit.Test;
 
 import no.hvl.dat109.modell.TerningKopp;
 
+/**
+ * @author vilhelm
+ *
+ */
 public class TerningKoppTest {
 	
 	private TerningKopp test;

@@ -56,12 +56,17 @@ public class Yatzoo {
 	 *  @return void
 	 */
 	public void start() {
+		
+		int antallSpillere = ui.lesAntallSpillere();
+		for (int i = 0; i < antallSpillere; i++) {
+			leggTilSpiller();
+		}
 		while (!spillFerdig) {
 			
 			ui.visRundeRegler(runde);
 			spillRunde();
 			
-			vinner = finnVinner();
+			vinner = finnRundeVinner();
 			rundeVinner();
 			nyRunde();
 			if (runde > 12) {
@@ -75,9 +80,25 @@ public class Yatzoo {
 	}
 	
 
+
+
+	/**
+	 * Finner rundevinneren
+	 * @return Spiller
+	 */
+	public Spiller finnRundeVinner() {
+		int score = 0; 
+		Spiller rundeVinner = null;
+		for (Spiller s : spillere) {
+			if (s.getRundeScore().get(runde - 1) >= score) {
+				score = s.getRundeScore().get(runde - 1);
+				rundeVinner = s;
+			}
+		}
+		return rundeVinner;
+	}
 	
-
-
+	
 	/**
 	 * @return void
 	 */
@@ -99,8 +120,10 @@ public class Yatzoo {
 	 * @param spiller
 	 * @return boolean
 	 */
-	public boolean leggTilSpiller(Spiller spiller) {
-		return spillere.add(spiller);
+	public void leggTilSpiller() {
+		
+		spillere.add(new Spiller(ui.lesInnSpiller()));
+		
 	}
 
 	/**

@@ -30,12 +30,15 @@ public class Tekstgrensesnitt implements YatzooUI {
 
 	public Integer lesAntallSpillere() {
 		System.out.print("\tOppgi antall spillere: ");
-		return tast.nextInt();
+		int nextInt = tast.nextInt();
+		tast.nextLine();
+		return nextInt;
+		
 	}
 
 	public String lesInnSpiller() {
 		System.out.print("\tOppgi navn på spiller: ");
-		return tast.next();
+		return tast.nextLine();
 	}
 
 	public void visRundeRegler(int runde) {

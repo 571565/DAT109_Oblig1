@@ -57,17 +57,19 @@ public class Yatzoo {
 	 */
 	public void start() {
 		while (!spillFerdig) {
+			
 			ui.visRundeRegler(runde);
 			spillRunde();
-			if (spillFerdig == Boolean.TRUE) {
-				visVinner();
-				return;
-			}
+			
 			vinner = finnVinner();
 			rundeVinner();
 			runde++;
+			if (runde > 12) {
+				spillFerdig = Boolean.TRUE;
+			}
 			
 		}
+		visVinner();
 		
 		
 	}
@@ -77,7 +79,6 @@ public class Yatzoo {
 	 * @return void
 	 */
 	public void rundeVinner() {
-		System.out.println("------------------");
 		System.out.println("\t" + vinner.getNavn() + " vant runde "+ runde + " med " + vinner.getRundeScore().get(runde - 1) + " score");
 	}
 	
@@ -131,14 +132,14 @@ public class Yatzoo {
 	 */
 	public void spillRunde() {
 		
-		if (runde > 12) {
-			spillFerdig = Boolean.TRUE;
-		}
+		
 
 		for (int i = 0; i < antallSpillere() && spillFerdig == Boolean.FALSE; i++) {
 			
 			Spiller s = spillere.get(i);
 			max_score = false;
+			
+			System.out.println("Det er " + s.getNavn() + " sin tur:");
 			
 			valgteDyr = spillTrekk(s);
 			int rundeScore = regnUtScore(valgteDyr);
